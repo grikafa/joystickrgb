@@ -1,9 +1,18 @@
+/* Bu kodlar Ilayda Adiguzel (gri kafa) tarafindan hazirlanmistir. Herhangi bir hakki falan zaten yok sadece kullanip 
+paylasacaksaniz eger, adimin gecmesinden baska bir sey istemiyorum :) 
+
+İlayda 2016  */ 
+
+
+
+
 const int x_ekseni = A0;
 const int y_ekseni = A1;
 const int kirmizi = 11;
 const int mavi = 10;
 const int yesil = 9;
-
+/* Degiskenleri kolay kullanim icin atadık. Joysticki aralarda bir yere hareket ettirirsek ara renkler 
+yanmasi icin PWM pinlerine bagladik */
 
 
 void setup() {
@@ -11,37 +20,44 @@ void setup() {
   pinMode(kirmizi, OUTPUT);
   pinMode (yesil , OUTPUT);
   pinMode(mavi ,OUTPUT);
-
+/*Ledlerimizi enerji verecegimiz icin cikis ayarladik */ 
 }
 
 void loop() {
-  int (x_durum) = analogRead(x_ekseni);
+  int (x_durum) = analogRead(x_ekseni);   /*yine kolaylik saglamasi icin x_durum adli bir degiskeni x_ekseni nin analog deger
+  ine atadik*/ 
 if (analogRead(x_ekseni) == 0)
 { 
 
     digitalWrite (kirmizi, HIGH) ;
-}
+} */ bu kod sayesinde eger x eksenini 0 konumuna getirirsek led kirmizi yanacak*/ 
 else  
     {
       
       digitalWrite (kirmizi,LOW);
     }
-  
+  /* bu kod da eger x ekseni 0 da degilse kirmizi ledi sondurmemizi saglar */ 
   int (y_durum) = analogRead(y_ekseni);
 
 if ((y_durum) == 0) 
 { 
 digitalWrite(yesil , HIGH);
 
-} 
+} */ bu kod sayesinde eger y eksenini 0 konumuna getirirsek led yesil yanacak*/ 
 else 
-{ digitalWrite(yesil,LOW); } 
+{ 
+
+   digitalWrite(yesil,LOW);
+} 
+  /* bu kod da eger x ekseni 0 da degilse kirmizi ledi sondurmemizi saglar */ 
 
 if ((x_durum) == 1023)
 digitalWrite(mavi,HIGH);
+*/ bu kod sayesinde eger x eksenini 1023 konumuna getirirsek led mavi yanacak*/ 
+
 else
 digitalWrite(mavi,LOW);
-
+  /* bu kod da eger x ekseni 1023 da degilse mavi ledi sondurmemizi saglar */ 
 
 if ((y_durum) == 1023)
 {
@@ -49,6 +65,8 @@ digitalWrite (mavi , HIGH);
 digitalWrite (yesil,LOW);
 digitalWrite (kirmizi,HIGH); 
 }
+*/ bu kod sayesinde eger y eksenini 1023 konumuna getirirsek led beyaz yanacak*/ 
+
 
 else
 {
@@ -57,7 +75,7 @@ digitalWrite (yesil,LOW);
 digitalWrite (kirmizi,LOW); 
 }
 
-
+ /* bu kod da eger y ekseni 1023 da degilse beyaz ledi sondurmemizi saglar */
 
 
    
