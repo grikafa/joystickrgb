@@ -1,0 +1,66 @@
+const int x_ekseni = A0;
+const int y_ekseni = A1;
+const int kirmizi = 11;
+const int mavi = 10;
+const int yesil = 9;
+
+
+
+void setup() {
+
+  pinMode(kirmizi, OUTPUT);
+  pinMode (yesil , OUTPUT);
+  pinMode(mavi ,OUTPUT);
+
+}
+
+void loop() {
+  int (x_durum) = analogRead(x_ekseni);
+if (analogRead(x_ekseni) == 0)
+{ 
+
+    digitalWrite (kirmizi, HIGH) ;
+}
+else  
+    {
+      
+      digitalWrite (kirmizi,LOW);
+    }
+  
+  int (y_durum) = analogRead(y_ekseni);
+
+if ((y_durum) == 0) 
+{ 
+digitalWrite(yesil , HIGH);
+
+} 
+else 
+{ digitalWrite(yesil,LOW); } 
+
+if ((x_durum) == 1023)
+digitalWrite(mavi,HIGH);
+else
+digitalWrite(mavi,LOW);
+
+
+if ((y_durum) == 1023)
+{
+digitalWrite (mavi , HIGH);
+digitalWrite (yesil,LOW);
+digitalWrite (kirmizi,HIGH); 
+}
+
+else
+{
+digitalWrite (mavi , LOW);
+digitalWrite (yesil,LOW);
+digitalWrite (kirmizi,LOW); 
+}
+
+
+
+
+   
+  
+
+}
