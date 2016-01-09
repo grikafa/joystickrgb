@@ -65,7 +65,7 @@ digitalWrite (mavi , HIGH);
 digitalWrite (yesil,LOW);
 digitalWrite (kirmizi,HIGH); 
 }
-*/ bu kod sayesinde eger y eksenini 1023 konumuna getirirsek led beyaz yanacak*/ 
+*/ bu kod sayesinde eger y eksenini 1023 konumuna getirirsek led magenta(mora benzer bir renk) yanacak*/ 
 
 
 else
@@ -75,7 +75,7 @@ digitalWrite (yesil,LOW);
 digitalWrite (kirmizi,LOW); 
 }
 
- /* bu kod da eger y ekseni 1023 da degilse beyaz ledi sondurmemizi saglar */
+ /* bu kod da eger y ekseni 1023 da degilse magenta ledi sondurmemizi saglar */
 
 
    
